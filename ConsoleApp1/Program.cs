@@ -6,63 +6,40 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 30; ++i)
-            {
-                Console.Write(i + ": ");
-                if (i % 3 == 0)
-                {
-                    Console.Write("ping ");
-                }
-
-                if (i % 5 == 0)
-                {
-                    Console.Write("pong");
-                }
-
-                Console.WriteLine();
-
-            }
-
-            Console.WriteLine("===========================");
-
-            int year = 2104;
-            if ((year % 4 != 0 || year % 100 == 0) && year % 400 != 0)
-            {
-                Console.WriteLine(year + " год не является високосным");
-            }
-            else
-            {
-                Console.WriteLine(year + " год является високосным");
-            }
-
-            Console.WriteLine("===========================");
-
-            int iter = 0;
-            int a = 0;
-            int b = 1;
-            while (iter < 5)
-            {
-                ++iter;
-                Console.Write(a + " " + b + " ");
-                a += b;
-                b += a;
-            }
-
-
-            Console.WriteLine("\n===========================");
-
-            double num1 = 4;
-            double num2 = 6;
-            double num1Sq = Math.Pow(num1, 2);
-            double num2Sq = Math.Pow(num2, 2);
-            double averageNumSq = (num1Sq + num2Sq) / 2;
-            Console.WriteLine("Среднее арифметическое квадратов чисел " + num1 + " и " + num2 + " составляет " + averageNumSq);
-            double num1Abs = Math.Abs(num1);
-            double num2Abs = Math.Abs(num2);
-            double averageNumAbs = (num1Abs + num2Abs) / 2;
-            Console.WriteLine("Среднее арифметическое модулей чисел " + num1 + " и " + num2 + " составляет " + averageNumAbs);
-
+            lab1();
+            lab2();
         }
+
+            public static void lab1() 
+            {
+                Console.WriteLine("\n===========================");
+
+                Console.WriteLine("Лабораторная №1:\n" +
+                    "Вычисление среднего арифметического квадратов и модулей двух чисел: ");
+                Console.WriteLine("Введите первое число: ");
+                double num1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Введите второе число: ");
+                double num2 = int.Parse(Console.ReadLine());
+                double num1Sq = Math.Pow(num1, 2);
+                double num2Sq = Math.Pow(num2, 2);
+                double averageNumSq = (num1Sq + num2Sq) / 2;
+                Console.WriteLine("Среднее арифметическое квадратов чисел " + num1 + " и " + num2 + " составляет " + averageNumSq);
+                double num1Abs = Math.Abs(num1);
+                double num2Abs = Math.Abs(num2);
+                double averageNumAbs = (num1Abs + num2Abs) / 2;
+                Console.WriteLine("Среднее арифметическое модулей чисел " + num1 + " и " + num2 + " составляет " + averageNumAbs);
+            }
+
+
+            public static void lab2()
+            {
+            Console.WriteLine("Лабораторная №2:\n"+ "Вычисление выражения: ");
+            Console.WriteLine("Введите x: ");
+            double x = double.Parse(Console.ReadLine());
+            double result = Math.Sqrt(Math.Pow(Math.Pow(x, 4), 0.2) + Math.Pow(Math.Pow(x, 4 - x), 0.2)) + Math.Log(Math.Abs(x - 20.5));
+            Console.WriteLine("Результат вычисления при x = " + x + ": " + result);
+            }
+
     }
 }
 

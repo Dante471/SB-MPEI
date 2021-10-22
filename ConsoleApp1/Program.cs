@@ -33,11 +33,11 @@ namespace ConsoleApp1
 
             public static void lab2()
             {
-            Console.WriteLine("Лабораторная №2:\n"+ "Вычисление выражения: ");
-            Console.WriteLine("Введите x: ");
-            double x = double.Parse(Console.ReadLine());
-            double result = Math.Sqrt(Math.Pow(Math.Pow(x, 4), 0.2) + Math.Pow(Math.Pow(x, 4 - x), 0.2)) + Math.Log(Math.Abs(x - 20.5));
-            Console.WriteLine("Результат вычисления при x = " + x + ": " + result);
+                Console.WriteLine("Лабораторная №2:\n"+ "Вычисление выражения: ");
+                Console.WriteLine("Введите x: ");
+                double x = double.Parse(Console.ReadLine());
+                double result = Math.Sqrt(Math.Pow(Math.Pow(x, 4), 0.2) + Math.Pow(Math.Pow(x, 4 - x), 0.2)) + Math.Log(Math.Abs(x - 20.5));
+                Console.WriteLine("Результат вычисления при x = " + x + ": " + result);
             }
 
     }
